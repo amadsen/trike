@@ -1,7 +1,7 @@
 {
   "name": "trike",
   "version": "1.0.0",
-  "description": "Simple try/catch wrapper that runs a function and returns an error-back-like array",
+  "description": "Simple try/catch wrapper that runs a function and returns an error-first array",
   "main": "index.js",
   "scripts": {
     "test": "nyc tape test/*-test.js"
@@ -16,5 +16,21 @@
   "devDependencies": {
     "nyc": "^11.2.1",
     "tape": "^4.8.0"
-  }
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {
+    "nyc": "^11.2.1",
+    "tape": "^4.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amadsen/trike.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amadsen/trike/issues"
+  },
+  "homepage": "https://github.com/amadsen/trike#readme"
 }
