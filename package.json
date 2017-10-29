@@ -1,0 +1,20 @@
+{
+  "name": "trike",
+  "version": "1.0.0",
+  "description": "Simple try/catch wrapper that runs a function and returns an error-back-like array",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc tape test/*-test.js"
+  },
+  "keywords": [
+    "try",
+    "catch",
+    "wrapper"
+  ],
+  "author": "Aaron Madsen",
+  "license": "MIT",
+  "devDependencies": {
+    "nyc": "^11.2.1",
+    "tape": "^4.8.0"
+  }
+}
