@@ -1,6 +1,6 @@
 {
   "name": "trike",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Simple try/catch wrapper that runs a function and returns an error-first array",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,7 @@
     "example": "examples",
     "test": "test"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amadsen/trike.git"

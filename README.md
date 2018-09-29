@@ -3,7 +3,7 @@
 Trike is a simple try/catch wrapper around a function that returns an array similar to the common node error-first callback convention. This serves two main purposes:
 
 1. Successful and errored calls can be easily distinguished through simple array destructuring.
-2. the try/catch is extracted from the calling and called functions, allow for better optimization.
+2. the try/catch is extracted from the calling and called functions, allowing for better optimization.
 
 ## Installation
 
@@ -42,9 +42,26 @@ console.error(err); // 'null'
 console.log(joined); // 'One fish. Two fish.'
 ~~~
 
+## `async` / `await` support
+
+Trike now has support for `async` / `await` where the runtime natively supports it. If you pass an async function (or other function that returns a `Promise`) to `trike()` it will return a `Promise` that will resolve to `trike`'s normal error-first callback-like array with the error and result set by resolving or rejecting the passed function.
+
+~~~javascript
+// Notice the use of an immediately invoked async function
+// expession just to demonstrate awaiting an async trike.
+(async () => {
+  const [err, result] = await trike(async () => {
+    return 'Success!'
+  });
+
+  console.error(err);  // null
+  console.log(result); // 'Success!'
+})();
+~~~
+
 ## License
 
-Copyright (c) 2017 Aaron Madsen
+Copyright (c) 2018 Aaron Madsen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
