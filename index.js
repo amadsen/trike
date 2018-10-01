@@ -1,6 +1,6 @@
 function trike(fn, ...args) {
   try {
-    const r = fn(...args);
+    var r = fn(...args);
     // if r is Promise-like, resolve it
     if (r.then && r.catch) {
       return r
